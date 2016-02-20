@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import HeaderNav from "HeaderNav"
+import Home from "Home"
 
 export default class App extends Component {
   static propTypes = {
@@ -14,7 +14,7 @@ export default class App extends Component {
   render() {
     return (
         <div>
-            <HeaderNav />
+            <Home />
              {this.props.children}
         </div>
     )
