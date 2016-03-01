@@ -5,23 +5,22 @@ import consts from "app/consts"
 
 import { get as getArtist } from "app/reducers/artist"
 
-import ItemDetails from "ItemDetails"
-
 @connect(
     (state) => ({
         artist : state.artist
     }),
     (dispatch) => ({
-        getArtist : (value) => dispatch(getArtist(value)),
+        getArtist : (value) => dispatch(getArtists(value)),
     })
 )
-export default class PageArtist extends Component {
+
+export default class Artist extends Component {
 
   static propTypes = {
       params: PropTypes.shape({
         artistId:PropTypes.string,
       }),
-      artists : PropTypes.object,
+      artist : PropTypes.object,
       getArtist : PropTypes.func,
   };
 
@@ -31,7 +30,6 @@ export default class PageArtist extends Component {
       getArtist : () => {}
   };
   componentDidMount(){
-
       const {
         params,
         getArtist,
@@ -51,21 +49,15 @@ export default class PageArtist extends Component {
     }
   }
 
+
   render() {
-    const {
-      params,
-      artist,
-    } = this.props
-    return (
-      <div>
-        {
-            artist && !artist.loading &&
-            <ItemDetails name={artist.name}
-                         image={artist.picture ? artist.picture.url : null}
-                         kinds={artist.genres}
-                         songs={[{name:"..."},{name:"..."},{name:"..."}]}  />
-        }
-      </div>
+    return(
+    	<div>
+
+    	</div>
     )
   }
 }
+
+
+export default Artist;

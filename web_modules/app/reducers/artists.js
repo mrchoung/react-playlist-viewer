@@ -10,7 +10,7 @@ const initialState = {
 }
 
 const format = (data) => {
-    return {results:data.items}
+    return {results:data.artists}
 }
 
 // redux reducer
@@ -44,7 +44,7 @@ export default function reducer(state = initialState, action) {
 }
 
 // redux actions
-export function get(name) {
+export function get() {
     return {
         types: [
             GET,
@@ -52,7 +52,7 @@ export function get(name) {
             ERROR,
         ],
         promise: (
-            fetchJSON(consts.api.enpoints.getSearch(name,"artist"), {
+            fetchJSON(consts.api.enpoints.getArtists(), {
                 method: "GET"
             })
         )

@@ -1,20 +1,17 @@
-const apiPath = `https://api.spotify.com/v1/`;
-const apiExplorerPath = `https://artistexplorer.spotify.com/`
+const fetchArtistsPopular = `https://api.themoviedb.org/3/person/popular`;
+const fetchArtist = `https://api.themoviedb.org/3/person/`;
+const apiKey = `d07241f7f943c6861fa0a520b52cc049`
 
 export default {
   api:{
     enpoints:{
-
-      getSearch:(query, type)=>{
-        return apiPath+`search?query=${query}*&offset=0&limit=10&type=${type}`
+      getArtists:() =>{
+        return fetchArtistsPopular+`?api_key=apiKey`
       },
       getArtist:(id)=>{
-        return apiPath+`artists/${id}`
+        return fetchArtist+`${id}?api_key=apiKey`
       },
-      getKinds: () =>{
-        return apiExplorerPath+`api/genres`
-      }
-
+      
     }
   }
 }

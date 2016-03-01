@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-import HeaderNav from "HeaderNav"
-
 export default class App extends Component {
   static propTypes = {
       children: PropTypes.node,
@@ -14,7 +12,7 @@ export default class App extends Component {
   render() {
     return (
         <div>
-            <HeaderNav />
+             Super site 
              {this.props.children}
         </div>
     )

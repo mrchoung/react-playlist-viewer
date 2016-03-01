@@ -9,10 +9,8 @@ import * as reducers from "app/reducers"
 const store = createStore(combineReducers(reducers))
 
 import App from "./App"
-import PageHome from "PageHome"
-import PageArtist from "PageArtist"
-import PageDiscover from "PageDiscover"
-import PageNotFound from "PageNotFound"
+import Artists from "Artists"
+import Artist from "Artist"
 
 import DevTools from "app/redux/createDevTools"
 
@@ -28,16 +26,13 @@ export default class Routes extends Component {
   render() {
     return (
       <div>
-       <Provider store={ store }>
-          <Router history={browserHistory}>
-            <Route path="/" component={App}>
-                <Route path="artist/:artistId" component={PageArtist}/>
-                <Route path="discover" component={PageDiscover}/>
-                <IndexRoute component={PageHome} />
-            </Route>
-            <Route path="*" component={PageNotFound}/>
-          </Router>
-        </Provider>
+        <Router history={browserHistory}>
+          <Route path="/" component={App}>
+          </Route>
+          <Route path="artists" component={Artists}/>
+          <Route path="artists/:id" component={Artist}/>
+          <Route path="*" component={App}/>
+        </Router>
         { __DEVTOOLS__ && devtools }
       </div>
     )
