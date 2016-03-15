@@ -1,2 +1,2 @@
-export Artists from "./Artists"
-export Artist from "./Artist"
+export artists from "./artists"
+export artist from "./artist"

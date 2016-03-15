@@ -6,11 +6,11 @@ export const SET = "molotov/artists/SET"
 export const ERROR = "molotov/artists/ERROR"
 
 const initialState = {
-
+    
 }
 
 const format = (data) => {
-    return {results:data.artists}
+    return {results:data.items}
 }
 
 // redux reducer

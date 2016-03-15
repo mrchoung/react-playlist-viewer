@@ -1,16 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import {connect} from "react-redux"
+import {connect} from "react-redux";
 import fetchJSON from "app/fetchJSON";
-import consts from "app/consts"
+import consts from "app/consts";
 
-import { get as getArtist } from "app/reducers/artist"
+import { get as getArtist } from "app/reducers/artist";
 
 @connect(
     (state) => ({
         artist : state.artist
     }),
     (dispatch) => ({
-        getArtist : (value) => dispatch(getArtists(value)),
+        getArtist : (value) => dispatch(getArtist(value)),
     })
 )
 
@@ -29,6 +29,7 @@ export default class Artist extends Component {
       artist : null,
       getArtist : () => {}
   };
+  
   componentDidMount(){
       const {
         params,
@@ -51,13 +52,15 @@ export default class Artist extends Component {
 
 
   render() {
+    const {
+      params,
+      artist,
+    } = this.props
     return(
-    	<div>
-
-    	</div>
-    )
-  }
+         artist && !artist.loading &&
+            <div>{this.props.artist}</div>
+      )                   
+    }
 }
-
 
 export default Artist;

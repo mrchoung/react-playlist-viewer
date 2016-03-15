@@ -12,7 +12,6 @@ export default class App extends Component {
   render() {
     return (
         <div>
-             Super site 
              {this.props.children}
         </div>
     )
