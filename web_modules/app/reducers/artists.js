@@ -6,7 +6,7 @@ export const SET = "molotov/artists/SET"
 export const ERROR = "molotov/artists/ERROR"
 
 const initialState = {
-    
+
 }
 
 const format = (data) => {
@@ -52,7 +52,7 @@ export function get() {
             ERROR,
         ],
         promise: (
-            fetchJSON(consts.api.enpoints.getArtists(), {
+            fetchJSON(consts.api.enpoints.getArtits(), {
                 method: "GET"
             })
         )
