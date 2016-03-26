@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 export default class Input extends Component {
- getInitialState: function() {
+  getInitialState: function() {
     return {value: 'Hello!'};
   },
   handleChange: function(event) {

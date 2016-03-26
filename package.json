@@ -49,7 +49,9 @@
       "es2015",
       "stage-0"
     ],
-    "plugins":["transform-decorators-legacy"],
+    "plugins": [
+      "transform-decorators-legacy"
+    ],
     "env": {
       "development": {
         "presets": [
@@ -69,6 +71,7 @@
     "react-router": "^2.0.0",
     "redux": "^3.3.1",
     "redux-thunk": "^1.0.3",
+    "test": "^0.6.0",
     "whatwg-fetch": "^0.11.0"
   }
 }
