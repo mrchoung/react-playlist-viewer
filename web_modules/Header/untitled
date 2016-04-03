@@ -1,0 +1,21 @@
+import React, { Component, PropTypes } from 'react';
+
+import React from 'react';
+import RaisedButton from 'material-ui/lib/raised-button';
+
+const style = {
+  margin: 12,
+};
+
+export default class Header extends Component {
+	return(
+		render() {
+			 <div>
+			    <RaisedButton label="Acceuil" style={style} />
+			    <RaisedButton label="Artistes" primary={true} style={style} />
+			    <RaisedButton label="Secondary" secondary={true} style={style} />
+			    <RaisedButton label="Disabled" disabled={true} style={style} />
+			  </div>
+		}
+	)
+}
